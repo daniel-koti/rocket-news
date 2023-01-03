@@ -23,7 +23,6 @@ body, input, textarea, button {
 body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--body-bg-color);
-  color: #fff;
   font-family: 'League Spartan', sans-serif;
 }
 
@@ -36,8 +35,8 @@ strong {
 }
 
 .wrapper {
-  width: 100%;
-  height: 100vh;
+
+  
   display: grid;
   grid-template-columns: repeat(2, 1fr)
 }
@@ -125,6 +124,7 @@ form > .wrapper-elements > button {
 
 
 #aside-background {
+  height: 100vh;
   background-image: url('../public/read-news.png');
   background-repeat: no-repeat;
   background-position: top right;
@@ -132,8 +132,14 @@ form > .wrapper-elements > button {
 }
 
 @media (max-width: 780px) {
+  .logo {
+    width: 30rem;
+  }
+
   #aside-background {
     display: none;
+    visibility: hidden;
+    top: 0;
   }
 
   .wrapper {
@@ -141,7 +147,9 @@ form > .wrapper-elements > button {
   }
 
   form > .wrapper-elements {
-    width: 100%;
     z-index: 0;
+    width: 100%;
   }
+
+  
 }
